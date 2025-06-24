@@ -19,7 +19,22 @@ Students — No need to worry about this block!
 It’s just here to help Copilot support you better. 
 Start your code below 👇
 */
-
+/*document.addEventListener('DOMContentLoaded', function() {
+  fetch('https://randomfox.ca/floof/')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      const factElem = document.getElementById('fact');
+      if (factElem) {
+        factElem.textContent = data.
+        factElem.setAttribute('src', data.image);
+      }
+    })
+    .catch(function(error) {
+      console.error('Error fetching fox picture:', error);
+    });
+});*/
 
 
 
@@ -28,3 +43,19 @@ Start your code below 👇
 
 // Example placeholder:
 console.log("Team activity starter code loaded.");
+
+const API = 'https://randomfox.ca/floof/';
+const output = document.getElementById('output');
+
+const button = document.getElementById('fetch-button');
+
+button.addEventListener('click', () => {
+    fetch(API)
+    .then(Response => Response.json())
+    .then(data => {
+        output.setAttribute('src', data.image);
+    }).catch(error => {
+      console.error('Error fetching data:', error);
+    });
+  });
+
