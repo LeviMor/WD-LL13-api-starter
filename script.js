@@ -41,12 +41,12 @@ Start your code below 👇
 // Use this script to write your fetch logic
 // You'll fetch data from your selected API and display it on the page
 
-// Example placeholder:
-console.log("Team activity starter code loaded.");
 
+// Web API
 const API = 'https://randomfox.ca/floof/';
-const output = document.getElementById('output');
 
+// HTML elements
+const output = document.getElementById('output');
 const button = document.getElementById('fetch-button');
 
 button.addEventListener('click', () => {
